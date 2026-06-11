@@ -1,4 +1,4 @@
-#  Dogs vs Cats — Fine-Tuned VGG16 & Data Augmentation
+# 🐶🐱 Dogs vs Cats — Fine-Tuned VGG16 & Data Augmentation
 
 > Classify images as **Dogs** or **Cats** using a custom CNN baseline, transfer learning with fine-tuned **VGG16**, and an 8-transform image augmentation pipeline.
 
@@ -29,21 +29,21 @@ This project solves the classic **Dogs vs Cats** binary classification problem u
 
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
-| ![cat.693](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.693.jpg) | ![cat.814](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.814.jpg) | ![cat.836](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.836.jpg) | ![cat.903](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.903.jpg) | ![cat.1009](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.1009.jpg) |
+| ![cat693](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/cat.693.jpg) | ![cat814](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/cat.814.jpg) | ![cat836](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/cat.836.jpg) | ![cat903](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/cat.903.jpg) | ![cat1009](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/cat.1009.jpg) |
 | cat.693 | cat.814 | cat.836 | cat.903 | cat.1009 |
 
 ### 🐶 Dogs
 
 | | | | |
 |:---:|:---:|:---:|:---:|
-| ![dog.4](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.4.jpg) | ![dog.32](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.32.jpg) | ![dog.1160](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.1160.jpg) | ![dog.1289](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.1289.jpg) |
+| ![dog4](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/dog.4.jpg) | ![dog32](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/dog.32.jpg) | ![dog1160](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/dog.1160.jpg) | ![dog1289](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/dog.1289.jpg) |
 | dog.4 | dog.32 | dog.1160 | dog.1289 |
 
 ### 🔄 Augmented Sample
 
 | Original → Augmented |
 |:---:|
-| ![aug](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/aug-image-_0_9718.jpeg) |
+| ![aug](https://raw.githubusercontent.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation/main/aug-image-_0_9718.jpeg) |
 | `aug-image-_0_9718.jpeg` |
 
 > All images are resized to **224×224** and preprocessed with VGG16's built-in normalization before training.
@@ -105,7 +105,6 @@ gen = ImageDataGenerator(
     horizontal_flip=True
 )
 
-# Save 10 augmented copies per image back to training folder
 for x, val in zip(gen.flow(image,
                             save_to_dir='train/dog',
                             save_prefix='aug-image-',
@@ -146,11 +145,11 @@ Trained for **5 epochs** · Batch size **10** · Adam lr **0.0001**
 vgg16_model = tf.keras.applications.vgg16.VGG16()
 
 model = Sequential()
-for layer in vgg16_model.layers[:-1]:  # remove original output layer
+for layer in vgg16_model.layers[:-1]:
     model.add(layer)
 
 for layer in model.layers:
-    layer.trainable = False            # freeze all VGG16 weights
+    layer.trainable = False
 
 model.add(Dense(units=2, activation='softmax'))
 model.compile(optimizer=Adam(learning_rate=0.0001),
@@ -222,8 +221,8 @@ plot_confusion_matrix(cm=cm, classes=['cat', 'dog'], title='Confusion Matrix')
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/trisha2103/Dogs-vs-Cats-VGG16.git
-cd Dogs-vs-Cats-VGG16
+git clone https://github.com/trisha2103/Fine-Tuned-VGG16-Data-Augmentation.git
+cd Fine-Tuned-VGG16-Data-Augmentation
 
 # 2. Install dependencies
 pip install tensorflow scikit-learn matplotlib numpy
@@ -235,6 +234,7 @@ pip install tensorflow scikit-learn matplotlib numpy
 jupyter notebook "Data Augmentation - image - CNN .ipynb"
 jupyter notebook "CNN - Fine Tuned VGG16 model.ipynb"
 ```
+
 ---
 
 ## 👩‍💻 Author

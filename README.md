@@ -29,14 +29,14 @@ This project solves the classic **Dogs vs Cats** binary classification problem u
 
 | | | | | |
 |:---:|:---:|:---:|:---:|:---:|
-| ![cat693](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.693.jpg) | ![cat814](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.814.jpg) | ![cat836](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.836.jpg) | ![cat903](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.903.jpg) | ![cat1009](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.1009.jpg) |
+| ![cat.693](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.693.jpg) | ![cat.814](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.814.jpg) | ![cat.836](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.836.jpg) | ![cat.903](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.903.jpg) | ![cat.1009](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/cat.1009.jpg) |
 | cat.693 | cat.814 | cat.836 | cat.903 | cat.1009 |
 
 ### 🐶 Dogs
 
 | | | | |
 |:---:|:---:|:---:|:---:|
-| ![dog4](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.4.jpg) | ![dog32](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.32.jpg) | ![dog1160](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.1160.jpg) | ![dog1289](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.1289.jpg) |
+| ![dog.4](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.4.jpg) | ![dog.32](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.32.jpg) | ![dog.1160](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.1160.jpg) | ![dog.1289](https://raw.githubusercontent.com/trisha2103/Dogs-vs-Cats-VGG16/main/dog.1289.jpg) |
 | dog.4 | dog.32 | dog.1160 | dog.1289 |
 
 ### 🔄 Augmented Sample
